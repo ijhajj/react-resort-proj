@@ -2,11 +2,21 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import defaultImg from '../images/room-1.jpeg';
 import PropTypes from 'prop-types';
+import {Helmet} from 'react-helmet';
 
 export default function Room({room}) {
     const {name,slug,price,images}=room;
   return (
     <article className="room">
+        <div>
+            <Helmet>
+            <title>
+                {name}
+            </title>
+          <meta name="description" content="Here I am Binny" />
+          <meta name="content" content={name}/>
+            </Helmet>
+        </div>
         <div className="img-container">
             <img src={images[0]||defaultImg} alt="single room"/>
             <div className="price-top">

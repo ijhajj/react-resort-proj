@@ -3,6 +3,7 @@ import {RoomContext} from '../context';
 import Title from '../components/Title'; 
 import Loading from './Loading';
 import Room from './Room';
+import { Helmet } from 'react-helmet';
 
 export default class FeaturedRooms extends Component {
     static contextType = RoomContext;
